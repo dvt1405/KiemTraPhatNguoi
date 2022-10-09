@@ -1,0 +1,165 @@
+/** @author: kun.tun *      */
+ext {
+    /** Android **/
+    kotlin_version = "1.7.0"
+    minSdk_version = 21
+    targetSdk_version = 29
+    versionCode = 1
+    versionName = '1.0'
+    compileSdk_version = 29
+    buildTools_version = '29.0.2'
+    multidex_version = '1.0.3'
+    androidXAnnotations = '1.5.0'
+    sdpVersion = '1.0.6'
+
+    /** AppCompat **/
+    appcompat_version = '1.5.1'
+    androidxCoreKtx_version = '1.2.0'
+    recyclerView_version = '1.2.1'
+    constraintLayout_version = '2.0.4'
+    card_version = '1.0.0'
+    /** Testing **/
+    junit_version = '4.13'
+    androidJunit_version = '1.1.1'
+    espresscoTest_version = '3.2.0'
+
+    /**Paging**/
+    paging_version = '3.0.0'
+
+    /**Architecture component**/
+    nav_version = '2.3.5'
+    room_version = '2.3.0'
+    archLifecycle_version = '2.3.1'
+    androidxArch_version = '2.1.0'
+    coroutines = '1.2.0'
+
+    /** Dagger **/
+    dagger_version = '2.44'
+
+    /** Retrofit **/
+    gson_version = '2.7.2'
+    retrofit_version = '2.9.0'
+
+    /** RxJava **/
+    rxAndroid_version = '2.1.0'
+    rxKotlin_version = '2.3.0'
+
+    /** Google **/
+    googlePlay_version = '1.7.1'
+    googlePlaySercieMap_version = '17.0.0'
+    androidMapsUtil_version = '1.0.2'
+    firebase_auth_version = '19.3.0'
+    firebase_fcm_version = '20.1.7'
+
+    /** Other Library **/
+    glide_version = '4.11.0'
+    checkApi_version = '1.1.9'
+    volley_version = '1.1.1'
+    success_dialog_version = '1.5.6'
+    timberVersion = '4.7.1'
+    threetenabp = '1.2.4'
+    loggingInterceptor = '5.0.0-alpha.2'
+    eventBus = '3.2.0'
+
+    /** Material **/
+    material_version = '1.6.1'
+
+    /** Android **/
+    appDependencies = [
+            kotlinJdk              : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            appCompat              : "androidx.appcompat:appcompat:$appcompat_version",
+            coreKtx                : "androidx.core:core-ktx:$androidxCoreKtx_version",
+            constrainLayout        : "androidx.constraintlayout:constraintlayout:$constraintLayout_version",
+            recyclerView           : "androidx.recyclerview:recyclerview:$recyclerView_version",
+            carView                : "androidx.cardview:cardview:$card_version",
+            kotlinCoroutines       : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines",
+            kotlinCoroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines",
+            multidex               : "com.android.support:multidex:$multidex_version",
+            annotation             : "androidx.annotation:annotation:$androidXAnnotations"
+    ]
+
+    jetpack = [
+            javascriptEngine: "androidx.javascriptengine:javascriptengine:1.0.0-alpha02"
+    ]
+
+    archComponentDependencies = [
+            roomDatabaseRunTime          : "androidx.room:room-runtime:$room_version",
+            roomDatabaseKtx              : "androidx.room:room-ktx:$room_version",
+            roomDatabaseKapt             : "androidx.room:room-compiler:$room_version",
+            roomDatabaseTesting          : "androidx.room:room-testing:$room_version",
+
+            archLifecycleVersionExtension: "androidx.lifecycle:lifecycle-extensions:$archLifecycle_version",
+            archLifecycleVersionKapt     : "androidx.lifecycle:lifecycle-compiler:$archLifecycle_version",
+            archLifecycleVersionTesting  : "androidx.arch.core:core-testing:$androidxArch_version",
+
+            pagingRuntime                : "androidx.paging:paging-runtime:$paging_version",
+            pagingTesting                : "androidx.paging:paging-common:$paging_version",
+            pagingRxjava                 : "androidx.paging:paging-rxjava2:$paging_version",
+
+            navigationFragment           : "androidx.navigation:navigation-fragment-ktx:$nav_version",
+            navigationUI                 : "androidx.navigation:navigation-ui-ktx:$nav_version",
+            navigationDynamicFeature     : "androidx.navigation:navigation-dynamic-features-fragment:$nav_version",
+
+    ]
+
+    testDependencies = [
+            jUnitTest          : "junit:junit:$junit_version",
+            androidJUnitTest   : "androidx.test.ext:junit:$androidJunit_version",
+            androidTestEspresso: "androidx.test.espresso:espresso-core:$espresscoTest_version"
+    ]
+
+    rxJavaDependencies = [
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$rxAndroid_version",
+            rxKotlin : "io.reactivex.rxjava2:rxkotlin:$rxKotlin_version"
+    ]
+
+    daggerDependencies = [
+            daggerAndroid       : "com.google.dagger:dagger-android:$dagger_version",
+            daggerAndroidSupport: "com.google.dagger:dagger-android-support:$dagger_version",
+    ]
+    complier = [
+            kapDaggerCompiler: "com.google.dagger:dagger-compiler:2.44",
+    ]
+    processor = [
+            kapDaggerAndroidProcessor: "com.google.dagger:dagger-android-processor:$dagger_version"
+    ]
+
+    retrofitDependencies = [
+            retrofit             : "com.squareup.retrofit2:retrofit:$retrofit_version",
+            retrofitRxJavaAdapter: "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version",
+            retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:$retrofit_version",
+            loggingInterceptor   : "com.squareup.okhttp3:logging-interceptor:$loggingInterceptor"
+    ]
+
+    commonGoogleDependencies = [
+            materialDesign: "com.google.android.material:material:$material_version"
+    ]
+
+    mapDependencies = [
+            googlePlaySercicesMaps: "com.google.android.gms:play-services-maps:$googlePlaySercieMap_version",
+            googleAndroidMapUtils : "com.google.maps.android:android-maps-utils:$androidMapsUtil_version",
+    ]
+
+    googlePlayService = [
+            googlePlayCore: "com.google.android.play:core:$googlePlay_version",
+    ]
+
+    firebaseDependencies = [
+            firebaseAuth: "com.google.firebase:firebase-auth-ktx",
+    ]
+
+    glideDependencies = [
+            glide        : "com.github.bumptech.glide:glide:$glide_version",
+            glideCompiler: "com.github.bumptech.glide:compiler:4.13.2"
+    ]
+
+    otherLibraryDependencies = [
+            checkApi      : "com.kt:api:$checkApi_version",
+            volley        : "com.android.volley:volley:$volley_version",
+            successDialog : "com.github.f0ris.sweetalert:library:$success_dialog_version",
+            eventBus      : "org.greenrobot:eventbus:$eventBus",
+            sdpUnit       : "com.intuit.sdp:sdp-android:$sdpVersion",
+            lotieAnimation: "com.airbnb.android:lottie:5.2.0"
+    ]
+
+}
